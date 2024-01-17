@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <link href="./angularsingle/css/custom.css" rel="stylesheet" />
+  <!-- Bootstrap -->
+  <link href="./angularsingle/css/bootstrap.css" rel="stylesheet">
+  <!-- Links -->
+  <link href="./angularsingle/css/camera.css" rel="stylesheet">
+  <link href="./angularsingle/css/subscribe.css" rel="stylesheet">
+  <script src="./angularsingle/js/bootstrap.min.js"></script>
+  <script src="./angularsingle/js/tm-scripts.js"></script>
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <style>
+    :root {
+      --MainColor: #0C566A;
+    --HoverColor: #43849A;
+    }
+
+    .validateSignUpMsg {
+      font-size: var(--font16);
+      font-family: var(--font-family-montserrat);
+      color: var(--ErrorMsg);
+    }
+
+
+    #overlyLoader {
+      position: fixed;
+      z-index: 999999;
+      top: 0px;
+      left: 0px;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      filter: Alpha(Opacity=60);
+      opacity: 0.6;
+      -moz-opacity: 0.6;
+      border: none;
+    }
+
+    .overlayloader {
+      z-index: 999999;
+      width: 100%;
+      height: 100%;
+      filter: Alpha(Opacity=60);
+      opacity: 0.6;
+      -moz-opacity: 0.6;
+      border: none;
+    }
+
+
+    #theprogress {
+      /* margin: 0px auto; */
+      background-color: transparent;
+      padding: 10px;
+      width: 80px;
+      height: 80px;
+      line-height: 30px;
+      text-align: center;
+      border: none;
+      /* display: inline-block; */
+      /* vertical-align: middle; */
+      /* margin-top: 50vh; */
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    #modalprogress {
+      color:  #0C566A;
+      font-weight: bold;
+      font-size: 14px;
+   
+    }
+
+    #imgWaitIcon {
+      background: transparent;
+      width: 80px;
+      height: 80px;
+      border: none;
+      display: block;
+    }
+  </style>
+
+  <style>
+    footer.page-footer.font-small.blue.pt-4.mt-4 {
+      background: #fff !important;
+    }
+
+    input#txtNewsletterEmailFooter,
+    button.thm-btn.btn-theme-success.p-2.pl-5.pr-5.text-uppercase.border-1.mt-1.mb-1 {
+      height: 37.41px !important;
+      width: 279px !important;
+    }
+
+    input#txtNewsletterEmailFooter {
+      text-align: center;
+    }
+
+
+    .footer-copyright.text-center.py-4.mt-3.text-white {
+      background:  #0C566A;
+      height: 74px;
+      font-size: 15px;
+    }
+
+
+
+    button.btn.active {
+      display: none;
+    }
+
+
+
+    a i {
+      font-style: normal;
+    }
+
+
+
+    .social-round-icon a:hover {
+      background: var(--HoverColor);
+    }
+
+    .fa-linkedin-in:before,
+    .fa-linkedin-in:before {
+      content: "";
+    }
+
+
+    [class*='fa-']:before {
+      font-family: 'FontAwesome';
+      color: inherit;
+    }
+
+    .social-round-icon a i {
+      font-size: 22px;
+    }
+
+    footer.page-footer.font-small.blue.pt-4.mt-4 {
+      background: #fff !important;
+      padding-bottom: 0;
+    }
+
+
+
+    @media (max-width:991px) {
+      p.para-5.para-2-c-2.mb-1.mt-5 {
+        text-align: center !important;
+      }
+    }
+
+
+    @media screen and (min-width:992px) {
+
+      .row11 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+
+      .iconbackground {
+        width: 54px;
+        height: 54px;
+        background: #0C566A;
+        align-items: center;
+        justify-content: center;
+        
+        display: flex;
+        border-radius: 50%;
+        color: white !important;
+      }
+
+      .col-md-3.mb-md-0.mb-3.pl-md-5.mt-2 {
+        text-align: initial;
+        display: flex;
+        justify-content: center;
+      }
+
+      .footer-copyright.text-center.py-4.mt-3.text-white {
+        background: #0C566A;
+        height: 74px;
+        font-size: 15px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+    }
+
+    @media only screen and (min-width:426px) {
+      .footer-copyright {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+    }
+  </style>
+  <style>
+    .DeskAdd,
+    .DeskAddl {
+      margin-bottom: 30px;
+
+    }
+
+    blockquote:before {
+      display: block;
+      position: absolute;
+      content: "\f10d";
+      font-size: var(--font45) !important;
+      color: #212529;
+      font-weight: 400;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      font-family: 'FontAwesome';
+      font-style: italic;
+    }
+
+    blockquote p,
+    blockquote div {
+      padding-left: 60px;
+      font-weight: bold;
+      margin: 25px 0;
+      font-style: italic;
+      color: #212529;
+    }
+  </style>
+
+  <style>
+    .HideSliderMobile {
+      display: none;
+    }
+
+    .HideSliderDestop {
+      display: block;
+    }
+
+    .spotlightmobile {
+      display: none;
+    }
+
+    .spotlightdesktop {
+      display: block;
+    }
+
+    @media screen and (max-width:991px) {
+      .MobAdd {
+        margin-top: 30px;
+
+      }
+
+      .SpotDiv {
+        margin-bottom: 30px;
+      }
+
+      .HideSliderMobile {
+        display: block;
+      }
+
+      .HideSliderDestop {
+        display: none;
+      }
+
+      .spotlightmobile {
+        display: block;
+      }
+
+      .spotlightdesktop {
+        display: none;
+      }
+    }
+
+
+
+
+
+    @media screen and (min-width:577px) {
+      .carousel2__button--prev {
+        left: 5%;
+      }
+    }
+  </style>
+
+  
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
